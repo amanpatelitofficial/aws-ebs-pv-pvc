@@ -13,3 +13,19 @@ This mode allows the volume to be mounted as read-only by multiple nodes (pods) 
 ### ReadWriteMany (RWX):
 
 This mode allows the volume to be mounted as read-write by multiple nodes (pods) simultaneously. It's used for shared storage where multiple pods need both read and write access to the data. NFS (Network File System) and other network-based storage solutions often support this access mode.
+
+
+## persistentVolumeReclaimPolicy
+
+### Retain:
+
+When the PVC is deleted or released, the PV and the associated storage resources are not automatically deleted. The storage remains intact, and it is the administrator's responsibility to manually reclaim and delete the resources.
+
+### Delete:
+
+When the PVC is deleted or released, the PV and the associated storage resources are automatically deleted. This option is suitable for scenarios where the storage should be released and the resources reclaimed automatically.
+
+### Recycle (Deprecated):
+
+This policy is deprecated and not recommended for use. It used to be a way to perform basic cleanup of the storage, but it has been deprecated in favor of more advanced solutions like dynamic provisioning and storage classes.
+
