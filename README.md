@@ -1,4 +1,4 @@
-### pv asses mode 
+### pv & pvc asses mode 
 
 In Kubernetes, the "access mode" of a Persistent Volume (PV) or Persistent Volume Claim (PVC) specifies how the volume can be accessed by pods running in your cluster. There are three commonly used access modes:
 
